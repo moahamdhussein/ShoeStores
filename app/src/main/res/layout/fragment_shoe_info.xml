@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="shoeVM"
+            type="com.example.shoestores.viewModel.ShoeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#c5c3c6"
+        tools:context=".screens.ShoeInfoFragment">
+
+        <TextView
+            android:id="@+id/tv_addNewShoe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Add new Shoe"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_ShoeName"
+            style="@style/textInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/shoename"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_addNewShoe">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_ShoeName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onTextChanged="@{(text,start,before,count)-> shoeVM.newShoe.setName(text.toString())}"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_Company"
+            style="@style/textInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Company Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_ShoeName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_Company"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onTextChanged="@{(text,start,before,count)-> shoeVM.newShoe.setCompany(text.toString())}"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_ShoeSize"
+            style="@style/textInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Shoe Size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_Company">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_ShoeSize"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:onTextChanged="@{(text,start,before,count)-> shoeVM.newShoe.setSize(text.toString())}"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_Description"
+            style="@style/textInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Shoe Description"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_ShoeSize">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_Description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onTextChanged="@{(text,start,before,count)-> shoeVM.newShoe.setDescription(text.toString())}"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save"
+            style="@style/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#f87060"
+            android:text="Save shoe details"
+            android:textSize="16sp"
+            app:cornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_Description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

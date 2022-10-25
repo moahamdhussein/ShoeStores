@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ShoeStores</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_in_shoe_store">Welcome in Shoe store</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">password</string>
+    <string name="login">Login</string>
+    <string name="sign_in">Sign In</string>
+    <string name="best_shoe">here you can find best shoes</string>
+    <string name="welcome_text">Welcome in our store</string>
+    <string name="instructions">instructions</string>
+    <string name="terms_and_conditions">our terms and condition we may that will help you</string>
+    <string name="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim distinctio ut molestias ducimus laborum, accusantium in assumenda ratione accusamus eum iure quos doloribus fugit quidem dicta maxime nostrum rem cupiditate.</string>
+    <string name="username">UserName</string>
+    <string name="name">Shoe Name: %s</string>
+    <string name="company">company Name: %s</string>
+    <string name="size">company Name: %s</string>
+    <string name="description">description: %s</string>
+    <string name="shoename">ShoeName</string>
+
+    <string name="shoe_name_validation_error">* name must not be empty</string>
+    <string name="shoe_company_validation_error">* company name must not be empty</string>
+    <string name="shoe_size_validation_error">* size must not be empty</string>
+    <string name="shoe_description_validation_error">* description must not be empty</string>
+
+
+</resources>
