@@ -7,7 +7,7 @@
        android:layout_height="match_parent"
        android:background="@color/black"
        tools:context=".screens.ShoeListFragment">
-
+<!--scroll view to make screen scrollable when it complete with views-->
        <ScrollView
            android:id="@+id/sv_listItem"
            android:layout_width="match_parent"
@@ -16,7 +16,7 @@
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toTopOf="parent">
-
+<!--    liner layout to add new shoe one after another vertically  -->
            <LinearLayout
                android:id="@+id/ll_ShoeItem"
                android:layout_width="match_parent"
@@ -24,7 +24,7 @@
                android:orientation="vertical">
            </LinearLayout>
        </ScrollView>
-
+<!--        floating action to navigate to info screen to add new shoe -->
        <com.google.android.material.floatingactionbutton.FloatingActionButton
            android:id="@+id/fab_addShoe"
            android:layout_width="wrap_content"

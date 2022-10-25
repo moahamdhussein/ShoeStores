@@ -11,17 +11,14 @@ class ShoeViewModel : ViewModel() {
 
     private val _shoeItem = MutableLiveData<MutableList<Shoe>?>(mutableListOf())
     var newShoe = Shoe()
-    init {
-        newShoe = Shoe()
-    }
 
+
+    // to add shoe
     fun addItem(shoe: Shoe) {
-
         _shoeItem.value?.add(shoe)
-        _shoeItem.value = _shoeItem.value
     }
 
-
+    // clear newShoe after store it
     fun clearShoeData() {
         _isValidShoe.value = false
         newShoe = Shoe()
@@ -36,7 +33,7 @@ class ShoeViewModel : ViewModel() {
         return !itmeData.isNullOrEmpty()
     }
 
-
+    // validation on shoe data
     fun correctInputNewShoe(): Boolean {
         return newShoe.let {
 

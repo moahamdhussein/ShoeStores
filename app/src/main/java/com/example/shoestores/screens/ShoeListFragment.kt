@@ -42,7 +42,7 @@ class ShoeListFragment : Fragment() {
         return binding.root
     }
 
-
+    // to add card view to liner layout
     private fun addView(shoe: Shoe): View {
         val itemShoeBinding = ShoeItemBinding.inflate(LayoutInflater.from(requireContext()), null, false)
         itemShoeBinding.shoe = shoe

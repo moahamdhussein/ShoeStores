@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
 
         val appBarConfiguration = getAppBarConfiguration()
+
         binding.toolbar.setupWithNavController(navController ,getAppBarConfiguration())
         setSupportActionBar(binding.toolbar)
 
@@ -31,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-
+    // to make up button in specific fragment not all fragment
     private fun getAppBarConfiguration(): AppBarConfiguration{
         return AppBarConfiguration(
             setOf(

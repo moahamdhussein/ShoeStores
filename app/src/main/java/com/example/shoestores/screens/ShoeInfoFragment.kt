@@ -33,7 +33,7 @@ class ShoeInfoFragment : Fragment() {
         binding.btnSave.setOnClickListener {
 
             shoeViewModel._isValidShoe.value = true
-
+            // to validate data in add shoe screen
             if (shoeViewModel.correctInputNewShoe()) {
                 shoeViewModel.newShoe.apply {
                     println(shoeViewModel.getShoeLive().value)
@@ -53,7 +53,7 @@ class ShoeInfoFragment : Fragment() {
         return binding.root
 
     }
-
+    // to validate data the use will enter in add shoe
     private fun showCheckError(): Boolean {
         clearErrorState()
         var check = true
@@ -80,7 +80,7 @@ class ShoeInfoFragment : Fragment() {
         return check
     }
 
-
+    // to clear error warning
     private fun clearErrorState() {
 
         binding.tilShoeName.error = null
@@ -101,7 +101,7 @@ class ShoeInfoFragment : Fragment() {
         super.onDestroy()
         shoeViewModel.clearShoeData()
     }
-
+    // to clear shoe variable to enter new shoe in next time
     override fun onStop() {
         super.onStop()
         shoeViewModel.clearShoeData()

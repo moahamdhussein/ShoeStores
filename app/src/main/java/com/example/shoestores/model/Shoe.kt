@@ -7,7 +7,7 @@ import com.example.shoestores.BR
 
 
 import kotlinx.parcelize.Parcelize
-
+// this class for store data about shoe
 @Parcelize
 class Shoe : Parcelable, BaseObservable() {
 

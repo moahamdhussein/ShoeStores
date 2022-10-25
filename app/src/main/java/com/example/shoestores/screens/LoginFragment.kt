@@ -39,6 +39,7 @@ class LoginFragment : Fragment() {
         return binding.root
     }
 
+    // function to validate data in login
     private fun showCheckError(): Boolean {
         clearError()
         var check = true
@@ -63,6 +64,7 @@ class LoginFragment : Fragment() {
         return check
     }
 
+    // to clear error warning
     private fun clearError() {
 
         binding.tilUserName.error = null
